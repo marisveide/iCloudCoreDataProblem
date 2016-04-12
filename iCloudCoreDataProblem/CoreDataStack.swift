@@ -146,12 +146,34 @@ class CoreDataStack: CustomStringConvertible
     // MARK: - iCloud Sync
     // ****************************************
     
+    var iCloudEnabled: Bool
+    {
+        let fm = NSFileManager.defaultManager()
+        if let _ = fm.ubiquityIdentityToken
+        {
+            return true
+        }
+        
+        return false
+    }
+    
+    func monitorUbiquitousContentUpdatesIfiCloudEnabled()
+    {
+        if iCloudEnabled
+        {
+            // PROBLEM with iCloud APPEARS HERE if called when user not logged in iCloud!!!
+            self.updateContextWithUbiquitousContentUpdates = true
+        }
+    }
+
+    
     var updateContextWithUbiquitousContentUpdates: Bool = false
     {
         willSet
         {
             printDebug()
             ubiquitousChangesObserver = newValue ? NSNotificationCenter.defaultCenter() : nil
+            
         }
     }
     
@@ -218,6 +240,7 @@ class CoreDataStack: CustomStringConvertible
     }
     
     
+    
     // ***********************************************
     // * Data: iCloud Container Actions
     // ***********************************************
@@ -253,7 +276,6 @@ class CoreDataStack: CustomStringConvertible
         }
     }
     
-    
     //*******************************************
     // MARK: - Init
     //*******************************************
@@ -263,8 +285,14 @@ class CoreDataStack: CustomStringConvertible
         self.inMemory = inMemory
         
         self.options = [NSMigratePersistentStoresAutomaticallyOption: true,
-                        NSInferMappingModelAutomaticallyOption: true,
-                        NSPersistentStoreUbiquitousContentNameKey: CoreDataStack.storeName]
+                        NSInferMappingModelAutomaticallyOption: true]
+
+        if iCloudEnabled
+        {
+            self.options?[NSPersistentStoreUbiquitousContentNameKey] = CoreDataStack.storeName
+            self.monitorUbiquitousContentUpdatesIfiCloudEnabled()
+        }
+
     }
     
 }

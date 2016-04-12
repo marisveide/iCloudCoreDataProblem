@@ -38,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     
     func printItems()
     {
+        print("iCloud Enabled: \(dataStore.stack.iCloudEnabled)")
+        
         printDebug("DataStore Managed Context: \(dataStore.managedContext)")
         
         for item in items ?? []
@@ -85,7 +87,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func applicationDidBecomeActive(application: UIApplication)
     {
-        print("==========================================")
+        dataStore.stack.monitorUbiquitousContentUpdatesIfiCloudEnabled()
+        
         printDebug()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         

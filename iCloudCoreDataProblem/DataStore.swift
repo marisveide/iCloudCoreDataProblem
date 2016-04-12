@@ -53,12 +53,15 @@ class DataStore
     
     @objc func persistentStoreCoordinatorDidChangeStores(notification: NSNotification)
     {
+        printDebug()
     }
     
     var persistentStoreCoordinatorChangesObserver: NSNotificationCenter?
     {
         didSet
         {
+            printDebug()
+            
             oldValue?.removeObserver(self, name: NSPersistentStoreCoordinatorStoresDidChangeNotification,
                                      object: self.stack.persistentStoreCoordinator)
             
@@ -137,7 +140,6 @@ class DataStore
         self.stack = CoreDataStack(inMemory: inMemory)
         // self.stack = CoreDataStackLocal()
         
-        self.stack.updateContextWithUbiquitousContentUpdates = true // PROBLEM APPEARS HERE!!!
         self.persistentStoreCoordinatorChangesObserver = NSNotificationCenter.defaultCenter()
     }
     
