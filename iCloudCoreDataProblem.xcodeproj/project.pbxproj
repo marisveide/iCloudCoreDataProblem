@@ -10,11 +10,16 @@
 		6D5DC0321CBCF058001E9B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0311CBCF058001E9B00 /* AppDelegate.swift */; };
 		6D5DC0341CBCF058001E9B00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0331CBCF058001E9B00 /* ViewController.swift */; };
 		6D5DC0371CBCF058001E9B00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5DC0351CBCF058001E9B00 /* Main.storyboard */; };
-		6D5DC03A1CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0381CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodeld */; };
 		6D5DC03C1CBCF058001E9B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5DC03B1CBCF058001E9B00 /* Assets.xcassets */; };
 		6D5DC03F1CBCF058001E9B00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5DC03D1CBCF058001E9B00 /* LaunchScreen.storyboard */; };
 		6D5DC04A1CBCF058001E9B00 /* iCloudCoreDataProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0491CBCF058001E9B00 /* iCloudCoreDataProblemTests.swift */; };
 		6D5DC0551CBCF059001E9B00 /* iCloudCoreDataProblemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0541CBCF059001E9B00 /* iCloudCoreDataProblemUITests.swift */; };
+		6D5DC0631CBCF081001E9B00 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0621CBCF081001E9B00 /* CoreDataStack.swift */; };
+		6D5DC0731CBCF2BA001E9B00 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0721CBCF2BA001E9B00 /* DataStore.swift */; };
+		6D5DC0761CBCF2E4001E9B00 /* DB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0741CBCF2E4001E9B00 /* DB.xcdatamodeld */; };
+		6D5DC0851CBCFAFD001E9B00 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0831CBCFAFD001E9B00 /* Item+CoreDataProperties.swift */; };
+		6D5DC0861CBCFAFD001E9B00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0841CBCFAFD001E9B00 /* Item.swift */; };
+		6D5DC0881CBD0012001E9B00 /* CoreDataStackLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DC0871CBD0012001E9B00 /* CoreDataStackLocal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,6 @@
 		6D5DC0311CBCF058001E9B00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D5DC0331CBCF058001E9B00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D5DC0361CBCF058001E9B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6D5DC0391CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iCloudCoreDataProblem.xcdatamodel; sourceTree = "<group>"; };
 		6D5DC03B1CBCF058001E9B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D5DC03E1CBCF058001E9B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D5DC0401CBCF058001E9B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		6D5DC0501CBCF059001E9B00 /* iCloudCoreDataProblemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCloudCoreDataProblemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5DC0541CBCF059001E9B00 /* iCloudCoreDataProblemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudCoreDataProblemUITests.swift; sourceTree = "<group>"; };
 		6D5DC0561CBCF059001E9B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D5DC0621CBCF081001E9B00 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6D5DC0721CBCF2BA001E9B00 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		6D5DC0751CBCF2E4001E9B00 /* DB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DB.xcdatamodel; sourceTree = "<group>"; };
+		6D5DC0831CBCFAFD001E9B00 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6D5DC0841CBCFAFD001E9B00 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		6D5DC0871CBD0012001E9B00 /* CoreDataStackLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackLocal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +109,18 @@
 		6D5DC0301CBCF058001E9B00 /* iCloudCoreDataProblem */ = {
 			isa = PBXGroup;
 			children = (
+				6D5DC0831CBCFAFD001E9B00 /* Item+CoreDataProperties.swift */,
+				6D5DC0841CBCFAFD001E9B00 /* Item.swift */,
 				6D5DC0311CBCF058001E9B00 /* AppDelegate.swift */,
 				6D5DC0331CBCF058001E9B00 /* ViewController.swift */,
 				6D5DC0351CBCF058001E9B00 /* Main.storyboard */,
 				6D5DC03B1CBCF058001E9B00 /* Assets.xcassets */,
 				6D5DC03D1CBCF058001E9B00 /* LaunchScreen.storyboard */,
 				6D5DC0401CBCF058001E9B00 /* Info.plist */,
-				6D5DC0381CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodeld */,
+				6D5DC0621CBCF081001E9B00 /* CoreDataStack.swift */,
+				6D5DC0871CBD0012001E9B00 /* CoreDataStackLocal.swift */,
+				6D5DC0721CBCF2BA001E9B00 /* DataStore.swift */,
+				6D5DC0741CBCF2E4001E9B00 /* DB.xcdatamodeld */,
 			);
 			path = iCloudCoreDataProblem;
 			sourceTree = "<group>";
@@ -259,9 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D5DC03A1CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodeld in Sources */,
+				6D5DC0851CBCFAFD001E9B00 /* Item+CoreDataProperties.swift in Sources */,
 				6D5DC0341CBCF058001E9B00 /* ViewController.swift in Sources */,
 				6D5DC0321CBCF058001E9B00 /* AppDelegate.swift in Sources */,
+				6D5DC0761CBCF2E4001E9B00 /* DB.xcdatamodeld in Sources */,
+				6D5DC0861CBCFAFD001E9B00 /* Item.swift in Sources */,
+				6D5DC0731CBCF2BA001E9B00 /* DataStore.swift in Sources */,
+				6D5DC0631CBCF081001E9B00 /* CoreDataStack.swift in Sources */,
+				6D5DC0881CBD0012001E9B00 /* CoreDataStackLocal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,9 +425,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iCloudCoreDataProblem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.itissible.iCloudCoreDataProblem;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maris.iCloudCoreDataProblem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -416,9 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iCloudCoreDataProblem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.itissible.iCloudCoreDataProblem;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maris.iCloudCoreDataProblem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -488,6 +510,7 @@
 				6D5DC05B1CBCF059001E9B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D5DC05C1CBCF059001E9B00 /* Build configuration list for PBXNativeTarget "iCloudCoreDataProblemTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +519,7 @@
 				6D5DC05E1CBCF059001E9B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D5DC05F1CBCF059001E9B00 /* Build configuration list for PBXNativeTarget "iCloudCoreDataProblemUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,17 +528,18 @@
 				6D5DC0611CBCF059001E9B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6D5DC0381CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodeld */ = {
+		6D5DC0741CBCF2E4001E9B00 /* DB.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6D5DC0391CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodel */,
+				6D5DC0751CBCF2E4001E9B00 /* DB.xcdatamodel */,
 			);
-			currentVersion = 6D5DC0391CBCF058001E9B00 /* iCloudCoreDataProblem.xcdatamodel */;
-			path = iCloudCoreDataProblem.xcdatamodeld;
+			currentVersion = 6D5DC0751CBCF2E4001E9B00 /* DB.xcdatamodel */;
+			path = DB.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
