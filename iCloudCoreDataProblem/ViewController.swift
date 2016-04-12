@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool)
     {
-        print("viewDidAppear")
+        
     }
 
 }

@@ -150,15 +150,18 @@ class CoreDataStack: CustomStringConvertible
     {
         willSet
         {
+            printDebug()
             ubiquitousChangesObserver = newValue ? NSNotificationCenter.defaultCenter() : nil
         }
     }
     
     
     private var ubiquitousChangesObserver: NSNotificationCenter?
-        {
+    {
         didSet
         {
+            printDebug(ubiquitousChangesObserver)
+            
             oldValue?.removeObserver(
                 self,
                 name: NSPersistentStoreDidImportUbiquitousContentChangesNotification,

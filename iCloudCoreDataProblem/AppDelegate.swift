@@ -11,7 +11,6 @@ import CoreData
 
 var dataStore: DataStore!
 
-var testItem: Item?
 var items: [Item]?
 
 
@@ -39,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     
     func printItems()
     {
-        print("testItem: \(testItem)\n")
+        printDebug("DataStore Managed Context: \(dataStore.managedContext)")
         
         for item in items ?? []
         {
@@ -53,20 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         dataStore = DataStore()
         
-        testItem = dataStore.createItem("aa")
+        dataStore.createItem("aa")
         dataStore.save()
         
         items = dataStore.itemQuery()
-        testItem = items?.last
-        
-        printItems()
         
         return true
     }
 
     func applicationWillResignActive(application: UIApplication)
     {
-        print("applicationWillResignActive")
+        printDebug()
         
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -74,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func applicationDidEnterBackground(application: UIApplication)
     {
-        print("applicationDidEnterBackground")
+        printDebug()
         
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -82,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func applicationWillEnterForeground(application: UIApplication)
     {
-        print("applicationWillEnterForeground")
+        printDebug()
 
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
@@ -90,8 +86,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     func applicationDidBecomeActive(application: UIApplication)
     {
         print("==========================================")
-        print("applicationDidBecomeActive")
+        printDebug()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        // items = dataStore.itemQuery()
         
         printItems()
         
@@ -100,8 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func applicationWillTerminate(application: UIApplication)
     {
-        print("applicationWillTerminate")
-        
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
     }
